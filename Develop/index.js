@@ -5,6 +5,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
 const questions = [
+    // User's name
     {
         type: 'input',
         name: 'name',
@@ -18,6 +19,7 @@ const questions = [
             }
         }
     },
+    // User's github
     {
         type: 'input',
         name: 'github',
@@ -30,6 +32,7 @@ const questions = [
             }
         }
     },
+    // User's email address
     {
         type: 'input',
         name: 'email',
@@ -42,6 +45,7 @@ const questions = [
             }
         }
     },
+    // User's title of project
     {
         type: 'input',
         name: 'title',
@@ -54,6 +58,7 @@ const questions = [
             }
         }
     },
+    // User's description of project
     {
         type: 'input',
         name: 'description',
@@ -66,6 +71,7 @@ const questions = [
             }
         }
     },
+    // User's installation procedure of project
     {
         type: 'input',
         name: 'installation',
@@ -79,6 +85,7 @@ const questions = [
             }
         }
     },
+    // User's instructions to use project
     {
         type: 'input',
         name: 'usage',
@@ -92,6 +99,7 @@ const questions = [
             }
         }
     },
+    // User's instructions for contributing to project
     {
         type: 'input',
         name: 'contributing',
@@ -105,6 +113,7 @@ const questions = [
             }
         }
     },
+    // User's details of tests used in project
     {
         type: 'input',
         name: 'tests',
@@ -118,12 +127,14 @@ const questions = [
             }
         }
     },
+    // If the user would like a license on their project
     {
         type: 'confirm',
         name: 'confirmLicenses',
         message: 'Would you like to add a license into your project?',
         default: false
     },
+    // Which license the user would like
     {
         type: 'list',
         name: 'licenses',
