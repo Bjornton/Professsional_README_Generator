@@ -95,7 +95,7 @@ const questions = [
     {
         type: 'input',
         name: 'contributing',
-        message: 'Please enter instructions for others to contribute.',
+        message: 'Please enter instructions for others to contribute:',
         validate: contributionEntry => {
             if (contributionEntry) {
                 return true;
@@ -127,7 +127,7 @@ const questions = [
     {
         type: 'list',
         name: 'licenses',
-        message: 'Which license would you like to include?',
+        message: 'Which license would you like to include:',
         choices: ['MIT', 'GPL', 'CC--0'],
         when: ({ licesnesEntry }) => {
             if (licesnesEntry) {
@@ -144,7 +144,9 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions)
+}
 
 // Function call to initialize app
 init();
