@@ -68,13 +68,72 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'description',
-        message: 'Enter in a description of your project:',
-        validate: descriptionEntry => {
-            if (descriptionEntry) {
+        name: 'installation',
+        message: 'Enter in the instructions for installation:',
+        validate: installationEntry => {
+            if (installationEntry) {
                 return true;
             } else {
-                console.log("Please type in the description of your project.")
+                console.log('Please type in instructions for installation.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter in the instructions for usage:',
+        validate: usageEntry => {
+            if (usageEntry) {
+                return true;
+            } else {
+                console.log('Please type in the instructions for usage.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Please enter instructions for others to contribute.',
+        validate: contributionEntry => {
+            if (contributionEntry) {
+                return true;
+            } else {
+                console.log('Please type instructions for other people to contribute.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Please type in details of the tests used in this project:',
+        validate: testsEntry => {
+            if (testsEntry) {
+                return true;
+            } else {
+                console.log('Please enter details of the tests used.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'confirm',
+        name: 'confirmLicenses',
+        message: 'Would you like to add a license into your project?',
+        default: false
+    },
+    {
+        type: 'list',
+        name: 'licenses',
+        message: 'Which license would you like to include?',
+        choices: ['MIT', 'GPL', 'CC--0'],
+        when: ({ licesnesEntry }) => {
+            if (licesnesEntry) {
+                return true;
+            } else {
+                return false;
             }
         }
     },
