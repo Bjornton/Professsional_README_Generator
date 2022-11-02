@@ -29,12 +29,54 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (!license) {
+    return ``;
+  } else {
+    return `## Licenses
+    This project is covered under the ${license} license.`
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-DO LATER!!!!!
+  ${renderLicenseBadge(data.licenses)}
+  ## Table of Contents
+  * [Description](#description)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Licenses](#licenses)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  * [Credits](#credits)
+  
+  ## Description
+  ${data.description}
+  
+  ## Installation
+  ${data.installation}
+  
+  ## Usage
+  ${data.usage}
+
+  ## License
+  ${renderLicenseSection(data.licenses)}
+  
+  ## Contributing
+  ${data.contributing}
+  
+  ## Tests
+  ${data.tests}
+  
+  ## Questions
+  Have questions about this project?  
+  GitHub: https://github.com/${data.github}  
+  Email: ${data.email}
+  
+  ## Credits
+  ${data.name}
 `;
 }
 
