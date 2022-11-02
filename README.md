@@ -1,4 +1,4 @@
-# This is a sample README
+# Professional README Generator
   [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
   ## Table of Contents
   * [Description](#description)
@@ -11,22 +11,22 @@
   * [Credits](#credits)
   
   ## Description
-  This is a sample README
+  This program takes what the user entered into node, and turns it into a ReadMe.md file
   
   ## Installation
-  This is a sample README
+  Go into this repository and click on the Download Zip option in the green code drop down menu, then unzip the file and place it into a folder of your choosing.
   
   ## Usage
-  This is a sample README
+  REQUIRES NODE.JS
 
-  ## License
+  ## Licenses
   This project is covered under the MIT license.
   
   ## Contributing
-  This is a sample README
+  If you would like to contribute, you may first contact me at my email address linked in this README file.
   
   ## Tests
-  This is a sample README
+  There are no tests used on this project
   
   ## Questions
   Have questions about this project?  
